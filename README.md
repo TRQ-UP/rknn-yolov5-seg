@@ -1,5 +1,7 @@
 # rknn-yolov5-seg
-# 文件目录
+
+# 1.文件目录
+
 - ├── images: image_path
   
 - ├── model: rknn_model_path
@@ -25,3 +27,19 @@
 - ├── yolov5s-seg.onnx:5s_onnx
   
 - └── yolov5x-seg.onnx:5x_onnx
+  
+
+2.模型转换
+
+- cd trans_model
+  
+- python3 convert.py model.onnx rk3588/rk3568
+  
+
+    rknn模型转换在model目录下
+
+3.模型推理
+
+- python3 yolov5_seg_image.py
+  
+  结果保存在当前文件夹中的result.png
